@@ -6,8 +6,8 @@ public class NotificationService {
         this.emailServer = emailServer;
     }
 
-    public void sendEmailConfirm(String userEmail) {
+    public void sendConfirmation(String userEmail) {
         String message = "Welcome! Your registration is confirmed.";
-        emailServer.sendEmail(userEmail, message);
+        emailServer.sendEmailConfirm(userEmail, message);
     }
 }

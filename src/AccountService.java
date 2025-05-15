@@ -26,7 +26,7 @@ public class AccountService {
         User newUser = new User(userInfo);
         userRepository.saveAccount(newUser);
 
-        notificationService.sendEmailConfirm(newUser.getEmail());
+        notificationService.sendConfirmation(newUser.getEmail());
         return RegistrationResult.SUCCESS;
     }
 }
