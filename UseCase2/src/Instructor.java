@@ -10,5 +10,22 @@ public class Instructor {
         this.phone = phoneNumber;
         this.address = address;
     }
+
+        // Getters
+        public String getEmail() {
+            return email;
+        }
+    
+        public String getPassword() {
+            return password;
+        }
+    
+        public int getPhone() {
+            return phone;
+        }
+    
+        public String getAddress() {
+            return address;
+        }
     
 }
