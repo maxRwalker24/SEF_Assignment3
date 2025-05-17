@@ -1,9 +1,9 @@
 import java.util.Vector;
 
-public class Database {
+public class DatabaseManager {
     public Vector<Appointment> appointmentsList = new Vector<>(); //Vector holding the appointments
 
-    public Database(){} //Constructor
+    public DatabaseManager(){} //Constructor
 
     public void addAppointment(Appointment appointmentAdd){ //Addint appointment to the vector
         appointmentsList.add(appointmentAdd);

@@ -1,6 +1,6 @@
 public class AppointmentManager {
     static PaymentManager payment = new PaymentManager(); //Initializing a Payment manager to manage payments
-    static Database database = new Database(); //Initializing a database to store appointments
+    static DatabaseManager database = new DatabaseManager(); //Initializing a database to store appointments
 
     public static boolean BookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){
         boolean success = false;
