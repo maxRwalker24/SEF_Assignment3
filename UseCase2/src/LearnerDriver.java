@@ -29,12 +29,20 @@ public class LearnerDriver {
     //   return this.address;
     // }
 
-    public boolean userLogin(){
+    public boolean userLogin(String email, String password){
         boolean Success = false;
 
-        Success = security.loginValidation(this, "email", "password");
+        Success = security.loginValidation(this, email, password);
 
         return Success;
     }
 
+    public boolean userBookAppointment(String details, String paymentInfo){ 
+        boolean Success = false;
+        RoadRegistryPlatform.BookAppointment(this, details, paymentInfo);
+
+        return Success;
+    }
+
+    
 }
