@@ -1,23 +1,23 @@
 public class RoadRegistryPlatform {
-    static PaymentManager payment = new PaymentManager();
-    static Database database = new Database();
+    static PaymentManager payment = new PaymentManager(); //Initializing a Payment manager to manage payments
+    static Database database = new Database(); //Initializing a database to store appointments
 
     public static boolean BookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){
         boolean success = false;
-        int amountToPay = 1234;
+        int amountToPay = 1234; //amount that must be payed
 
-        success = payment.processPayment(paymentInfo, amountToPay, user);
+        success = payment.processPayment(paymentInfo, amountToPay, user); //Calling the payment manager to process the payment
 
-        if(success){
-            Appointment appointment = new Appointment(details);
-            database.addAppointment(appointment);
-            notifyInstructor(appointment, instructor);
+        if(success){ //If payment is successful:
+            Appointment appointment = new Appointment(details); //Create a new appointment 
+            database.addAppointment(appointment); //Add the appointment to the database
+            notifyInstructor(appointment, instructor); //Notify the instructor of the new appointment
         }
 
         return success;
     }
 
-    public static void notifyInstructor(Appointment notifyAppointment, Instructor instructor){
+    public static void notifyInstructor(Appointment notifyAppointment, Instructor instructor){ //Function to notify instructor
     }
 
 }

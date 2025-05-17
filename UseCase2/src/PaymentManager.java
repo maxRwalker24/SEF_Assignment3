@@ -3,16 +3,16 @@ public class PaymentManager {
 
     }
 
-    public boolean processPayment(String paymentInfo, int amountToPay, LearnerDriver user){
+    public boolean processPayment(String paymentInfo, int amountToPay, LearnerDriver user){ //Paying the amountToPay with the payment info
         boolean success = false;
 
-        if(success){
+        if(success){ //Calling the sendReciept function only if payment is successful
             sendReciept(user);
         }
 
         return success;
     }
 
-    private void sendReciept(LearnerDriver user){
+    private void sendReciept(LearnerDriver user){ //Sending the reciept back to the user
     }
 }

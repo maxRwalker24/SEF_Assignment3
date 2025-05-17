@@ -4,7 +4,7 @@ public class Instructor {
     private int phone;
     private String address;
 
-    public Instructor(String email, String address, String password, int phoneNumber){
+    public Instructor(String email, String address, String password, int phoneNumber){ //Constructor for the instructor
         this.email = email;
         this.password = password;
         this.phone = phoneNumber;
