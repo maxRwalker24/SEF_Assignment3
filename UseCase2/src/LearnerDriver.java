@@ -6,28 +6,12 @@ public class LearnerDriver {
 
     SecurityManager security = new SecurityManager();
 
-    private LearnerDriver(String email, String address, String password, int phoneNumber){
+    public LearnerDriver(String email, String address, String password, int phoneNumber){
         this.email = email;
         this.password = password;
         this.phone = phoneNumber;
         this.address = address;
     }
-
-    // public String getEmail() {
-    //   return this.email;
-    // }
-
-    // public String getPassword() {
-    //   return this.password;
-    // }
-
-    // public int getPhone() {
-    //   return this.phone;
-    // } 
-
-    // public String getAddress() {
-    //   return this.address;
-    // }
 
     public boolean userLogin(String email, String password){
         boolean Success = false;
@@ -37,12 +21,12 @@ public class LearnerDriver {
         return Success;
     }
 
-    public boolean userBookAppointment(String details, String paymentInfo){ 
+    public boolean userBookAppointment(String details, Instructor instructor, String paymentInfo){ 
         boolean Success = false;
-        RoadRegistryPlatform.BookAppointment(this, details, paymentInfo);
+        Success = RoadRegistryPlatform.BookAppointment(this, details, instructor, paymentInfo);
 
         return Success;
     }
 
-    
+
 }

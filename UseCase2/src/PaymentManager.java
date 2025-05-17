@@ -14,6 +14,5 @@ public class PaymentManager {
     }
 
     private void sendReciept(LearnerDriver user){
-        
     }
 }
