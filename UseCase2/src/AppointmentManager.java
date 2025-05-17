@@ -2,11 +2,10 @@ public class AppointmentManager {
     static PaymentManager payment = new PaymentManager(); //Initializing a Payment manager to manage payments
     static DatabaseManager database = new DatabaseManager(); //Initializing a database to store appointments
 
-    public static boolean BookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){
+    public static boolean bookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){
         boolean success = false;
-        int amountToPay = 1234; //amount that must be payed
 
-        success = payment.processPayment(paymentInfo, amountToPay, user); //Calling the payment manager to process the payment
+        success = payment.pay(paymentInfo, user); //Calling the payment manager to process the payment
 
         if(success){ //If payment is successful:
             Appointment appointment = new Appointment(details); //Create a new appointment 

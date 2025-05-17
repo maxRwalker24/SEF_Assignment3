@@ -1,37 +1,35 @@
 public class LearnerDriver {
-    private String email;
+    private String username;
     private String password;
     private int phone;
     private String address;
 
-    SecurityManager security = new SecurityManager();
-
-    public LearnerDriver(String email, String address, String password, int phoneNumber){ //Constructor for Learner/Driver
-        this.email = email;
+    public LearnerDriver(String username, String address, String password, int phoneNumber){ //Constructor for Learner/Driver
+        this.username = username;
         this.password = password;
         this.phone = phoneNumber;
         this.address = address;
     }
 
-    public boolean userLogin(String email, String password){ //Login function
+    public boolean login(String username, String password){ //Login function
         boolean Success = false;
 
-        Success = security.loginValidation(this, email, password); //Calling the security manager to check if login details are valid
+        Success = SecurityManager.login(username, password); //Calling the security manager to check if login details are valid
 
         return Success; //return whether it was successful or not, depending on which the message displayed will be different
     }
 
-    public boolean userBookAppointment(String details, Instructor instructor, String paymentInfo){ //Booking an appointment
+    public boolean bookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){ //Booking an appointment
         boolean Success = false;
-        Success = AppointmentManager.BookAppointment(this, details, instructor, paymentInfo); 
+        Success = AppointmentManager.bookAppointment(this, details, instructor, paymentInfo); 
         //Calling the RoadRegistryPlatform to book the appointment with the details and selected instructor, as well as payment info
 
         return Success;
     }
 
      // Getters
-    public String getEmail() {
-      return email;
+    public String getUsername() {
+      return username;
     }
 
     public String getPassword() {
