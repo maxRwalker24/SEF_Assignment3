@@ -1,4 +1,4 @@
-public class RoadRegistryPlatform {
+public class AppointmentManager {
     static PaymentManager payment = new PaymentManager(); //Initializing a Payment manager to manage payments
     static Database database = new Database(); //Initializing a database to store appointments
 

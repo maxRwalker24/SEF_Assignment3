@@ -23,7 +23,7 @@ public class LearnerDriver {
 
     public boolean userBookAppointment(String details, Instructor instructor, String paymentInfo){ //Booking an appointment
         boolean Success = false;
-        Success = RoadRegistryPlatform.BookAppointment(this, details, instructor, paymentInfo); 
+        Success = AppointmentManager.BookAppointment(this, details, instructor, paymentInfo); 
         //Calling the RoadRegistryPlatform to book the appointment with the details and selected instructor, as well as payment info
 
         return Success;
