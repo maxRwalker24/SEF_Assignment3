@@ -4,3 +4,6 @@
 
 **Name:** Max Walker  
 **Student ID:** s4101575
+
+**Name:** Anthony Duiker
+**Student ID:** s4105386
