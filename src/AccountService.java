@@ -1,5 +1,5 @@
 public class AccountService {
-
+    // Orchestrates various services related to the use case
     private UserRepository userRepository;
     private ValidationService validationService;
     private NotificationService notificationService;
