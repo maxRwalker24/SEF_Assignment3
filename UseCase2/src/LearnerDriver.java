@@ -29,5 +29,22 @@ public class LearnerDriver {
         return Success;
     }
 
+     // Getters
+    public String getEmail() {
+      return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
 
 }
