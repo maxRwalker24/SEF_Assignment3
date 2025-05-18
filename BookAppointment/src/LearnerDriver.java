@@ -11,22 +11,6 @@ public class LearnerDriver {
         this.address = address;
     }
 
-    public boolean login(String username, String password){ //Login function
-        boolean Success = false;
-
-        Success = SecurityManager.login(username, password); //Calling the security manager to check if login details are valid
-
-        return Success; //return whether it was successful or not, depending on which the message displayed will be different
-    }
-
-    public boolean bookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){ //Booking an appointment
-        boolean Success = false;
-        Success = AppointmentManager.bookAppointment(this, details, instructor, paymentInfo); 
-        //Calling the AppointmentManager to book the appointment with the details and selected instructor, as well as payment info
-
-        return Success;
-    }
-
      // Getters
     public String getUsername() {
       return username;
