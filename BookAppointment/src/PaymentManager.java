@@ -8,12 +8,12 @@ public class PaymentManager {
         boolean success = true;
 
         if(success){ //Calling the sendReciept function only if payment is successful
-            sendReciept(user);
+            displayReciept(user);
         }
 
         return success;
     }
 
-    private void sendReciept(LearnerDriver user){ //Sending the reciept back to the user
+    private void displayReciept(LearnerDriver user){ //Sending the reciept back to the user
     }
 }
