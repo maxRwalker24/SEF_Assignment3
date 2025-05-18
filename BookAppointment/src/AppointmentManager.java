@@ -10,7 +10,7 @@ public class AppointmentManager {
         if(success){ //If payment is successful:
             Appointment appointment = new Appointment(details); //Create a new appointment 
             database.addAppointment(appointment); //Add the appointment to the database
-            NotificationService.notifyInstructor(appointment, instructor); //Notify the instructor of the new appointment
+            notificationService.notifyInstructor(appointment, instructor); //Notify the instructor of the new appointment
         }
 
         return success;
