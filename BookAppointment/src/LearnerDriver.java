@@ -22,7 +22,7 @@ public class LearnerDriver {
     public boolean bookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){ //Booking an appointment
         boolean Success = false;
         Success = AppointmentManager.bookAppointment(this, details, instructor, paymentInfo); 
-        //Calling the RoadRegistryPlatform to book the appointment with the details and selected instructor, as well as payment info
+        //Calling the AppointmentManager to book the appointment with the details and selected instructor, as well as payment info
 
         return Success;
     }
