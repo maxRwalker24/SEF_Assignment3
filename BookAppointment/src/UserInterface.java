@@ -7,4 +7,8 @@ public class UserInterface {
     public boolean bookAppointment(LearnerDriver user, String details, Instructor instructor, String paymentInfo){
         return AppointmentManager.bookAppointment(user, details, instructor, paymentInfo);
     }
+
+    public void displayReceipt(String receipt) {
+        
+    }
 }

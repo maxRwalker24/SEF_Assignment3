@@ -5,7 +5,7 @@ public class DatabaseManager {
 
     public DatabaseManager(){} //Constructor
 
-    public void addAppointment(Appointment appointmentAdd){ //Addint appointment to the vector
-        appointmentsList.add(appointmentAdd);
+    public void addAppointment(Appointment appointment){ //Addint appointment to the vector
+        appointmentsList.add(appointment);
     }
 }
