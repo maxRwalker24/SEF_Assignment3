@@ -8,12 +8,9 @@ public class PaymentManager {
         boolean success = true;
 
         if(success){ //Calling the sendReciept function only if payment is successful
-            displayReciept(user);
+            UserInterface.displayReceipt("Reciept");
         }
 
         return success;
-    }
-
-    private void displayReciept(LearnerDriver user){ //Sending the reciept back to the user
     }
 }
